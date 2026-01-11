@@ -8,8 +8,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { getAuthUser } from "@/service/getAuthUser";
-import { logout } from "@/service/logout";
+// import { getAuthUser } from "@/service/getAuthUser";
+// import { logout } from "@/service/logout";
 import { TUser } from "@/types/user";
 import { Calendar, Menu } from "lucide-react";
 import Link from "next/link";
@@ -60,8 +60,7 @@ export default function Header() {
         {/* Logo */}
         <button
           onClick={() => handleNavigation("/")}
-          className="flex items-center gap-2 font-semibold text-xl hover:opacity-80 transition-opacity"
-        >
+          className="flex items-center gap-2 font-semibold text-xl hover:opacity-80 transition-opacity">
           <Calendar className="h-6 w-6" />
           <span>Next Event</span>
         </button>
@@ -72,8 +71,7 @@ export default function Header() {
             <Link href={item.url}>
               <button
                 key={item.url}
-                className="text-sm font-medium transition-colors hover:text-primary"
-              >
+                className="text-sm font-medium transition-colors hover:text-primary">
                 {item.title}
               </button>
             </Link>
@@ -94,8 +92,7 @@ export default function Header() {
               <Button
                 variant="outline"
                 onClick={() => handleNavigation("/signup")}
-                size="sm"
-              >
+                size="sm">
                 Sign Up
               </Button>
               <Button onClick={() => handleNavigation("/login")} size="sm">
@@ -126,8 +123,7 @@ export default function Header() {
                   <Link href={item.url}>
                     <button
                       key={item.url}
-                      className="text-left px-3 py-2 rounded-md hover:bg-accent transition-colors"
-                    >
+                      className="text-left px-3 py-2 rounded-md hover:bg-accent transition-colors">
                       {item.title}
                     </button>
                   </Link>
@@ -147,8 +143,7 @@ export default function Header() {
                     <Button
                       onClick={handleLogoutClick}
                       variant="outline"
-                      className="w-full"
-                    >
+                      className="w-full">
                       Logout
                     </Button>
                   </>
@@ -157,14 +152,12 @@ export default function Header() {
                     <Button
                       onClick={() => handleNavigation("/login")}
                       variant="outline"
-                      className="w-full"
-                    >
+                      className="w-full">
                       Login
                     </Button>
                     <Button
                       onClick={() => handleNavigation("/signup")}
-                      className="w-full"
-                    >
+                      className="w-full">
                       Sign Up
                     </Button>
                   </>
